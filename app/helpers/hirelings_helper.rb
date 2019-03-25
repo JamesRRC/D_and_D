@@ -1,0 +1,2 @@
+module HirelingsHelper
+end

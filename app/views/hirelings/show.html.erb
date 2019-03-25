@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hireling.name %>
+</p>
+
+<p>
+  <strong>Class:</strong>
+  <%= @hireling.class %>
+</p>
+
+<%= link_to 'Edit', edit_hireling_path(@hireling) %> |
+<%= link_to 'Back', hirelings_path %>

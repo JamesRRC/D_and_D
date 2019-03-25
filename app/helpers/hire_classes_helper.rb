@@ -1,0 +1,2 @@
+module HireClassesHelper
+end

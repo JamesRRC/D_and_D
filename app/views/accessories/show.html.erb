@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Accessory name:</strong>
+  <%= @accessory.accessory_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @accessory.description %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @accessory.cost %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @accessory.stock %>
+</p>
+
+<%= link_to 'Edit', edit_accessory_path(@accessory) %> |
+<%= link_to 'Back', accessories_path %>

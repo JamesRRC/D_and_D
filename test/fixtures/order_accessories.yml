@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order_id_fk: 1
+  accessory_id_fk: 1
+  purchase_price: 9.99
+
+two:
+  order_id_fk: 1
+  accessory_id_fk: 1
+  purchase_price: 9.99

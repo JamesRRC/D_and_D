@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Hire Classes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Class name</th>
+      <th>Class description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hire_classes.each do |hire_class| %>
+      <tr>
+        <td><%= hire_class.class_name %></td>
+        <td><%= hire_class.class_description %></td>
+        <td><%= link_to 'Show', hire_class %></td>
+        <td><%= link_to 'Edit', edit_hire_class_path(hire_class) %></td>
+        <td><%= link_to 'Destroy', hire_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hire Class', new_hire_class_path %>
