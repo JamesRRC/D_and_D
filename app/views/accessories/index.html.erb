@@ -19,7 +19,7 @@
       <tr>
         <td><%= accessory.accessory_name %></td>
         <td><%= accessory.description %></td>
-        <td><%= accessory.cost %></td>
+        <td>$<%= accessory.cost %></td>
         <td><%= accessory.stock %></td>
       </tr>
     <% end %>
@@ -30,4 +30,3 @@
 
 <br>
 
-<%= link_to 'New Accessory', new_accessory_path %>

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'search/results'
   devise_for :users
   resources :orders
   resources :hire_classes

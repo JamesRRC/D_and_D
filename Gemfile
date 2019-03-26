@@ -7,6 +7,9 @@ gem 'activeadmin'
 gem 'devise'
 gem 'carrierwave'
 gem 'kaminari'
+gem 'bootstrap'
+gem 'jquery-rails'
+gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
