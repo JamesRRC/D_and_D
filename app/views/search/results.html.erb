@@ -1,2 +1,23 @@
-<h1>Search#results</h1>
-<p>Find me in app/views/search/results.html.erb</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Accessory</th>
+      <th>Description</th>
+      <th>Cost</th>
+      <th>Stock</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accessories.each do |accessory| %>
+      <tr>
+        <td><%= accessory.accessory_name %></td>
+        <td><%= accessory.description %></td>
+        <td><%= number_to_currency accessory.cost %></td>
+        <td><%= accessory.stock %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

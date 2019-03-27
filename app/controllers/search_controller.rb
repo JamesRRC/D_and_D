@@ -2,7 +2,7 @@
 
 class SearchController < ApplicationController
   def results
-    params = [:q]
-    @accessories = Accessory.where('name LIKE ?')
+    @query = params[:q]
+    @accessories = Accessory.where('accessory_name LIKE ?', "%#{@query}%")
   end
 end
