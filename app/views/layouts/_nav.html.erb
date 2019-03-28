@@ -22,6 +22,9 @@
           Dropdown
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <% @hire_class_navs.each do |hire_class_nav| %>
+            <%= %>
+          <% end %>
           <%= link_to "Hire some friends!", hirelings_path, class:"dropdown-item" %>
           <%# <a class="dropdown-item" href="#">Hire some friends!</a> %>
           <div class="dropdown-divider"></div>
