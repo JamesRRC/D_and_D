@@ -6,13 +6,27 @@ class HirelingsController < ApplicationController
   # GET /hirelings
   # GET /hirelings.json
   def index
-    @hirelings = Hireling.all
-    @hire_classes = HireClass.all
+    @hirelings = if params['hire_class'].present?
+                   Hireling.where(hire_class: params['hire_class'])
+
+                 else
+                   Hireling.all
+
+                 end
   end
 
   # GET /hirelings/1
   # GET /hirelings/1.json
   def show; end
+
+  def hire_class
+    hire_classes = HireClass.where(class_name: params['hire_class'])
+    @count = hire_classes.count
+    if @count > 0
+      @hirelings = Hireling.where('hire_class_id = ?', hire_classes.first.id)
+    end
+    # render status: 200, json: { message: @hirelings.as_json }
+  end
 
   private
 

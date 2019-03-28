@@ -19,16 +19,18 @@
       </li> %>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          Hireling Classes
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <% @hire_class_navs.each do |hire_class_nav| %>
-            <%= %>
+            <%= link_to hire_class_nav.class_name, hire_class_nav.class_name, class:"dropdown-item" %>
+            <div class="dropdown-divider"></div>
           <% end %>
-          <%= link_to "Hire some friends!", hirelings_path, class:"dropdown-item" %>
+          <%= link_to "All Classes", hirelings_path, class:"dropdown-item" %>
+          <%# <%= link_to "Hire some friends!", hirelings_path, class:"dropdown-item" %>
           <%# <a class="dropdown-item" href="#">Hire some friends!</a> %>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Upgrade your gear!</a>
+
+          <%# <a class="dropdown-item" href="#">Upgrade your gear!</a> %>
 
           <%# <a class="dropdown-item" href="#">Something else here</a> %>
         </div>
