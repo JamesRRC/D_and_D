@@ -55,15 +55,16 @@
     </tr>
   </thead>
   <tbody>
-  <% @hire_classes.each do |hires| %>
+  <% @hire_classes.each do |ind_hires| %>
       <tr>
-        <td><%= hires.name %></td>
-        <td><%= hires.hire_class.class_name %></td>
-        <%# <% if hireling.image.present? %>
-          <%# <td> %>
-            <%# <%= image_tag hire_class.image.url, width:200 %>
-          <%# </td> %>
-        <%# <% end %>
+        <td><%= ind_hires.name %></td>
+        <%# <td><%= ind_hires.hire_class.class_name %></td> %>
+        <td><%= ind_hires.class_name %></td>
+        <% if ind_hires.image.present? %>
+          <td>
+            <%= image_tag hire_class.image.url, width:200 %>
+           </td>
+        <% end %>
 
       </tr>
     <% end %>
