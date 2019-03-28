@@ -43,7 +43,7 @@
 
       </tr>
     <% end %>
-
+  <% if @count > 0 %>
   <% @hire_classes.each do |ind_hires| %>
       <tr>
         <td><%= ind_hires.name %></td>
@@ -56,6 +56,6 @@
 
       </tr>
     <% end %>
-
+<%end%>
   </tbody>
 </table>
