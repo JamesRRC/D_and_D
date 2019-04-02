@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_01_182703) do
+ActiveRecord::Schema.define(version: 2019_04_02_161016) do
 
   create_table "abouts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2019_04_01_182703) do
     t.integer "stock"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "active"
   end
 
   create_table "active_admin_comments", force: :cascade do |t|

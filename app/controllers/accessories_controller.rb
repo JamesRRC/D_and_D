@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class AccessoriesController < ApplicationController
+  require 'application_helper'
   before_action :set_accessory, only: %i[show edit update destroy]
 
   # GET /accessories
@@ -8,7 +9,7 @@ class AccessoriesController < ApplicationController
   def index
     # @accessories = Accessory.all
     @accessories = Accessory.order('accessory_name').page(params[:page]).per(5)
-    @order_item = current_order.order_items.new
+    @order_item = current_order # current_order # .order_items.new
   end
 
   # GET /accessories/1

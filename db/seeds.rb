@@ -42,4 +42,55 @@ OrderStatus.create! id: 4, name: 'Cancelled'
   )
 end
 
+1.times do
+  Accessory.create(
+    accessory_name: 'Definitely has a Bottom Bag',
+    description: 'A bag that can hold lots of stuff you find on your travels, but it definitely has a bottom',
+    cost: 25.99,
+    stock: 29,
+    active: true
+  )
+  Accessory.create(
+    accessory_name: 'Mightier Sword',
+    description: 'They always said it was more mighty than a sword, you be the judge.',
+    cost: 109.99,
+    stock: 20,
+    active: true
+  )
+  Accessory.create(
+    accessory_name: 'Potion of Greater Strength',
+    description: 'Makes you really good at lifting stuff.',
+    cost: 2.99,
+    stock: 209,
+    active: true
+  )
+  Accessory.create(
+    accessory_name: 'Potion of Greater Agility',
+    description: 'It is basically coffee. You like coffee, just buy it.',
+    cost: 3.99,
+    stock: 100,
+    active: true
+  )
+  Accessory.create(
+    accessory_name: 'Shield of Shielding',
+    description: 'It might look like justs another board of wood, but it will deflect a blow or 2.',
+    cost: 50.99,
+    stock: 10,
+    active: true
+  )
+  Accessory.create(
+    accessory_name: 'Ruby or Redness',
+    description: 'It does not really do anything, but it is a ruby. Come on.',
+    cost: 200.99,
+    stock: 5,
+    active: true
+  )
+  Accessory.create(
+    accessory_name: 'Potion of Greater Wisom',
+    description: 'A book in liquid form. Learn all you need in just one gulp. Maybe 2.',
+    cost: 5.99,
+    stock: 20,
+    active: true
+  )
+
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
