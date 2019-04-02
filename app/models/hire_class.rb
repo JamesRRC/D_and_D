@@ -5,7 +5,11 @@ class HireClass < ApplicationRecord
 
   validates :name, uniqueness: true
 
-  def name
-    class_name
+  def class_name
+    name
+  end
+
+  def class_description
+    description
   end
 end

@@ -20,7 +20,7 @@ class HirelingsController < ApplicationController
   def show; end
 
   def hire_class
-    hire_classes = HireClass.where(class_name: params['hire_class'])
+    hire_classes = HireClass.where(name: params['hire_class'])
     @count = hire_classes.count
     if @count > 0
       @hirelings = Hireling.where('hire_class_id = ?', hire_classes.first.id)
