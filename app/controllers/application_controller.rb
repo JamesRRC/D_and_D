@@ -8,4 +8,12 @@ class ApplicationController < ActionController::Base
   def set_variables
     @hire_class_navs = HireClass.all
   end
+
+  def current_order
+    if !session[:order_id].nil?
+      Order.find(session[:order_id])
+    else
+      Order.new
+    end
+  end
 end

@@ -8,6 +8,7 @@ class AccessoriesController < ApplicationController
   def index
     # @accessories = Accessory.all
     @accessories = Accessory.order('accessory_name').page(params[:page]).per(5)
+    @order_item = current_order.order_items.new
   end
 
   # GET /accessories/1

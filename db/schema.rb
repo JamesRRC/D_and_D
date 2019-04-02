@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_27_180735) do
+ActiveRecord::Schema.define(version: 2019_04_01_182703) do
 
   create_table "abouts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -79,19 +79,33 @@ ActiveRecord::Schema.define(version: 2019_03_27_180735) do
     t.index ["hire_class_id"], name: "index_hirelings_on_hire_class_id"
   end
 
-  create_table "order_accessories", force: :cascade do |t|
-    t.integer "order_id_fk"
-    t.integer "accessory_id_fk"
-    t.decimal "purchase_price"
+  create_table "order_items", force: :cascade do |t|
+    t.integer "accessory_id"
+    t.integer "order_id"
+    t.decimal "unit_price"
+    t.integer "quantity"
+    t.decimal "total_price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["accessory_id"], name: "index_order_items_on_accessory_id"
+    t.index ["order_id"], name: "index_order_items_on_order_id"
+  end
+
+  create_table "order_statuses", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "orders", force: :cascade do |t|
-    t.string "accessories_ordered"
-    t.decimal "price_total"
+    t.decimal "subtotal"
+    t.decimal "tax"
+    t.decimal "shipping"
+    t.decimal "total"
+    t.integer "order_status_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["order_status_id"], name: "index_orders_on_order_status_id"
   end
 
   create_table "users", force: :cascade do |t|
