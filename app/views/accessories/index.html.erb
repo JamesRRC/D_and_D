@@ -23,7 +23,17 @@
         <td><%= accessory.description %></td>
         <td><%= number_to_currency accessory.cost %></td>
         <td><%= accessory.stock %></td>
-
+        <td>
+        <div class="input-group">
+          <%= number_field :stock, value: 1, class: "form-control", min: 1 %>
+        </div>
+        </td>
+        <td>
+          <div class="input-group-btn">
+            <%= hidden_field :accessory_id, value: accessory.id %>
+            <%= submit_tag "Add to Cart", class: "btn btn-primary" %>
+          </div>
+        </td>
       </tr>
     <% end %>
   </tbody>

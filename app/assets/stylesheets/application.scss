@@ -12,4 +12,12 @@
  *
  */
  @import "bootstrap";
- @import "bootstrap-sprockets"
+ @import "bootstrap-sprockets";
+
+ input {
+  margin: 5px;
+ }
+
+ .btn {
+  margin: 5px;
+ }
