@@ -22,6 +22,88 @@ Hireling.create(
   name: 'Lita Backstab'
 )
 
+Province.destroy_all
+
+Province.create(
+  name: 'Ontario',
+  pst: 0,
+  gst: 0,
+  hst: 13
+)
+Province.create(
+  name: 'Quebec',
+  pst: 9.975,
+  gst: 5,
+  hst: 0
+)
+Province.create(
+  name: 'British Columbia',
+  pst: 7,
+  gst: 5,
+  hst: 0
+)
+Province.create(
+  name: 'Saskatchewan',
+  pst: 6,
+  gst: 5,
+  hst: 0
+)
+Province.create(
+  name: 'Nova Scotia',
+  pst: 0,
+  gst: 0,
+  hst: 15
+)
+Province.create(
+  name: 'New Brunswick',
+  pst: 0,
+  gst: 0,
+  hst: 15
+)
+Province.create(
+  name: 'Newfoundland and Labrador',
+  pst: 0,
+  gst: 0,
+  hst: 15
+)
+Province.create(
+  name: 'Prince Edward Island',
+  pst: 0,
+  gst: 0,
+  hst: 15
+)
+Province.create(
+  name: 'Northwest Territories',
+  pst: 0,
+  gst: 5,
+  hst: 0
+)
+Province.create(
+  name: 'Nunavut',
+  pst: 0,
+  gst: 5,
+  hst: 0
+)
+Province.create(
+  name: 'Manitoba',
+  pst: 8,
+  gst: 5,
+  hst: 0
+)
+Province.create(
+  name: 'Yukon',
+  pst: 5,
+  gst: 5,
+  hst: 0
+)
+Province.create(
+  name: 'Alberta',
+  pst: 0,
+  gst: 5,
+  hst: 0
+)
+
+
 1.times do
   HireClass.create(
     name: 'Warrior',

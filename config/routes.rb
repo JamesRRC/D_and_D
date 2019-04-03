@@ -24,5 +24,6 @@ Rails.application.routes.draw do
   get 'search_results', to: 'search#results', as: 'search_results'
   get ':hire_class', to: 'hirelings#hire_class'
 
+
   root to: 'accessories#index'
 end

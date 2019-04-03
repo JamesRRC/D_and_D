@@ -17,7 +17,7 @@
 
   <tbody>
     <% @accessories.each do |accessory| %>
-    
+
       <tr>
         <td><%= accessory.accessory_name %></td>
         <td><%= accessory.description %></td>
@@ -38,7 +38,6 @@
     <% end %>
   </tbody>
 </table>
-
 <%= paginate @accessories %>
 
 <br>
