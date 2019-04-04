@@ -1,10 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'order_items/create'
-  get 'order_items/update'
-  get 'order_items/destroy'
-  get 'carts/show'
 
   # for STRIPE
   resources :charges

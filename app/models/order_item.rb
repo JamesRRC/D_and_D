@@ -25,7 +25,7 @@ class OrderItem < ApplicationRecord
   private
 
   def accessory_present
-    errors.add(:accessory, 'is not valid or is not active.') if accessory.nul?
+    errors.add(:accessory, 'is not valid or is not active.') if accessory.nil?
   end
 
   def order_present

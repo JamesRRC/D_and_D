@@ -1,5 +1,6 @@
 class ChargesController < ApplicationController
   def new
+    @amount = current_order.sub_total
   end
 
   def create

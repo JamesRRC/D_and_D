@@ -9,7 +9,7 @@ class AccessoriesController < ApplicationController
   def index
     # @accessories = Accessory.all
     @accessories = Accessory.order('accessory_name').page(params[:page]).per(5)
-    @order_item = current_order # current_order # .order_items.new
+    @order_item = current_order.order_items.new
   end
 
   # GET /accessories/1
@@ -73,6 +73,6 @@ class AccessoriesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def accessory_params
-    params.require(:accessory).permit(:accessory_name, :description, :cost, :stock)
+    params.require(:accessory).permit(:accessory_name, :description, :cost, :stock, :quantity, :accessory_id)
   end
 end
