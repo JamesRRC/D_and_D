@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   get 'order_items/update'
   get 'order_items/destroy'
   get 'carts/show'
+
+  # for STRIPE
+  resources :charges
+
   resources :abouts
   devise_for :users
   resources :orders

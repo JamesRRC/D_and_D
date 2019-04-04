@@ -11,6 +11,8 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 
+gem 'stripe'
+
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 # gem 'will_paginate', :git =>'https://github.com/mislav/will_paginate', :branch => 'master'
 
