@@ -15,7 +15,7 @@
     <% @hirelings.each do |hireling| %>
       <tr>
         <td><%= hireling.name %></td>
-        <td><%= hireling.hire_class.class_name %></td>
+        <td><%= hireling.hire_class.name %></td>
         <% if hireling.image.present? %>
           <td>
             <%= image_tag hireling.image.url, width:200 %>

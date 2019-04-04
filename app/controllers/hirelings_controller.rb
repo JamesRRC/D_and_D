@@ -8,10 +8,8 @@ class HirelingsController < ApplicationController
   def index
     @hirelings = if params['hire_class'].present?
                    Hireling.where(hire_class: params['hire_class'])
-
                  else
                    Hireling.all
-
                  end
   end
 
