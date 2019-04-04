@@ -6,8 +6,8 @@ class Order < ApplicationRecord
   before_create :set_order_status
   before_save :update_subtotal
 
-  validates :accessories_ordered, :price_total, presence: true
-  validates :price_total, numericality: true
+  #validates :accessories_ordered, :price_total, presence: true
+  #validates :price_total, numericality: true
 
   def sub_total
     order_items.collect { |oi| oi.valid? ? (oi.quantity * oi.unit_price) : 0 }.sum
