@@ -16,5 +16,24 @@
     <%= render 'carts/cart_row', accessory: order_item.accessory, order_item: order_item, show_total: true %>
   <% end %>
 <% end %>
+<h3>Select the realm you abide in</h3>
 
-<%= link_to 'checkout', new_charge_path %>
+<%= form_tag(new_charge_path, method: "get") do %>
+  <%= label_tag(:q, "Select a realm:") %>
+<select name="provinces">
+    <% @provinces.each do |province| %>
+      <option value="<%=province.id%>"><%= province.name %></option>
+    <% end %>
+  </select>
+  <%= submit_tag("Checkout") %>
+<% end %>
+<%# <select name="provinces"> %>
+    <%# <% @provinces.each do |province| %>
+      <%# <option value="province.pst + province.gst + province.hst"><%= province.name %>
+      <%# </option> %>
+    <%# <% end %>
+  </select>
+<br>
+<div class="btn-link">
+  <%= link_to 'checkout', new_charge_path %>
+</div>

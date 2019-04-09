@@ -1,10 +1,11 @@
 class ChargesController < ApplicationController
 
-
+  # hire_classes = HireClass.where(name: params['hire_class'])
   def new
+    @tax = Province.where(id: params['provinces'])
     @amount = (current_order.sub_total * 100).to_i
-    @provinces = Province.all
-    @taxtotal = @amount * (1 + )
+
+    # @taxtotal = @amount * (1 + )
   end
 
   def create

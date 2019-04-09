@@ -9,12 +9,7 @@
       <span><%= number_to_currency (@amount / 100) %></span>
     </label>
   </article>
-  <h3>Select the realm you abide in</h3>
-  <select name="provinces">
-    <% @provinces.each do |province| %>
-      <option value="province.pst + province.gst + province.hst"><%= province.name %></option>
-    <% end %>
-  </select>
+  
   <br>
   <br>
 
