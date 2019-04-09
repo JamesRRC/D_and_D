@@ -9,6 +9,11 @@
       <span><%= number_to_currency (@amount / 100) %></span>
     </label>
   </article>
+  <select name="provinces">
+    <% @provinces.each do |province| %>
+      <option value="province.Name"><%= province.Name %></option>
+    <% end %>
+  </select>
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
