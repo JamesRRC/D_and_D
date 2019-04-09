@@ -9,11 +9,14 @@
       <span><%= number_to_currency (@amount / 100) %></span>
     </label>
   </article>
+  <h3>Select the realm you abide in</h3>
   <select name="provinces">
     <% @provinces.each do |province| %>
-      <option value="province.Name"><%= province.Name %></option>
+      <option value="province.pst + province.gst + province.hst"><%= province.name %></option>
     <% end %>
   </select>
+  <br>
+  <br>
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"

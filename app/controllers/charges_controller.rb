@@ -1,8 +1,10 @@
 class ChargesController < ApplicationController
 
-  @provinces = Province.all
+
   def new
     @amount = (current_order.sub_total * 100).to_i
+    @provinces = Province.all
+    @taxtotal = @amount * (1 + )
   end
 
   def create
