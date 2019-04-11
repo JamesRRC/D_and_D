@@ -15,7 +15,8 @@ class AccessoriesController < ApplicationController
   # GET /accessories/1
   # GET /accessories/1.json
   def show
-    @accessory = Accessory.find(params[:showId])
+    @accessory = Accessory.find(params[:id])
+    @order_item = current_order.order_items.new
   end
 
   # GET /accessories/new
