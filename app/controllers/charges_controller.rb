@@ -14,7 +14,7 @@ class ChargesController < ApplicationController
     # @amount = ((current_order.sub_total) * (1 + (($tax.to_i) / 100 )) * 100).to_i
     @amount = ((current_order.sub_total) * (1 + (flash[:tax].to_d)) * 100).to_i
 
-    
+
     session[:order_id] = nil
 
     customer = Stripe::Customer.create({

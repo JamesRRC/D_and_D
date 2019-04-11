@@ -14,7 +14,9 @@ class AccessoriesController < ApplicationController
 
   # GET /accessories/1
   # GET /accessories/1.json
-  def show; end
+  def show
+    @accessory = Accessory.find(params[:showId])
+  end
 
   # GET /accessories/new
   def new
